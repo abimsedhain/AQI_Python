@@ -2,6 +2,8 @@ import tkinter as tk
 import requests
 import webbrowser
 
+API_KEY = "API_KEY_HERE"
+
 # HEIGHT & WIDTH FOR FRAME
 HEIGHT = 400
 WIDTH = 600
@@ -140,7 +142,7 @@ class Window(tk.Frame):
 
     def get_aqi(self):
 
-        ap_key = 'API_KEY_HERE'
+        ap_key = API_KEY
         url = 'https://api.airvisual.com/v2/nearest_city?key=' + ap_key
         response = requests.get(url)
         aqi = response.json()
