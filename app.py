@@ -25,7 +25,6 @@ y = (hs / 2) - (mHEIGHT / 2)
 
 class Window(tk.Frame):
     def __init__(self, master):
-
         tk.Frame.__init__(self, master)
         self.master = master
 
@@ -40,11 +39,15 @@ class Window(tk.Frame):
 
         self.place(relx=0.5, rely=0.09, relwidth=0.2, relheight=0.1, anchor='n')
         self.master.title("AIR QUALITY INDEX")
+        
+        self.background_image = tk.PhotoImage(file='bg.png')
+        self.background_label = tk.Label(root, image=self.background_image)
+        self.background_label.place(relwidth=1, relheight=1)
 
         frame = tk.Frame(self.master, bg='green')
         frame.place(relx=0.5, rely=0.09, relwidth=0.2, relheight=0.1, anchor='n')
 
-        button = tk.Button(frame, text="Get AQI", bg='#BDD358', highlightthickness=0, font=40, command=self.pop_aqi)
+        button = tk.Button(frame, text="Get AQI", bg='#BCF4DE', highlightthickness=0, font=40, command=self.pop_aqi)
         button.place(relheight=1, relwidth=1)
         
         my_menu = tk.Menu(self.master)
