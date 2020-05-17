@@ -46,11 +46,12 @@ class Window(tk.Frame):
 
         button = tk.Button(frame, text="Get AQI", bg='#BDD358', highlightthickness=0, font=40, command=self.get_aqi)
         button.place(relheight=1, relwidth=1)
-
+        
         lower_frame = tk.Frame(self.master, bg='black', bd=3)
         lower_frame.place(relx=0.5, rely=0.25, relwidth=0.75, relheight=0.6, anchor='n')
 
-        label = tk.Label(lower_frame, font=('Arial', 18), anchor='nw', justify='left', bd=15)
+        v = tk.StringVar()
+        label = tk.Label(lower_frame, font=('Arial', 18), anchor='nw', justify='left', bd=15, textvariable=v)
         label.place(relwidth=1, relheight=1)
 
         my_menu = tk.Menu(self.master)
@@ -151,8 +152,9 @@ class Window(tk.Frame):
         country = aqi['data']['country']
         aqindex = aqi['data']['current']['pollution']['aqius']
         temp = aqi['data']['current']['weather']['tp']
-
-        label['text'] = 'City: %s,%s \nAir Quality Index: %s \nTemp.(°C): %s' % (city, country, aqindex, temp)
+        
+        #label['text'] = 'City: %s,%s \nAir Quality Index: %s \nTemp.(°C): %s' % (city, country, aqindex, temp)
+        self.v.set('HELLO')
 
 
 app = Window(root)
