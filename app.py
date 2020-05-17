@@ -44,7 +44,7 @@ class Window(tk.Frame):
         frame = tk.Frame(self.master, bg='green')
         frame.place(relx=0.5, rely=0.09, relwidth=0.2, relheight=0.1, anchor='n')
 
-        button = tk.Button(frame, text="Get AQI", bg='#BDD358', highlightthickness=0, font=40, command=lambda: self.get_api())
+        button = tk.Button(frame, text="Get AQI", bg='#BDD358', highlightthickness=0, font=40, command=self.get_aqi)
         button.place(relheight=1, relwidth=1)
 
         lower_frame = tk.Frame(self.master, bg='black', bd=3)
