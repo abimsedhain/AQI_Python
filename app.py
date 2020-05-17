@@ -40,7 +40,7 @@ class Window(tk.Frame):
         self.place(relx=0.5, rely=0.09, relwidth=0.2, relheight=0.1, anchor='n')
         self.master.title("AIR QUALITY INDEX")
         
-        self.background_image = tk.PhotoImage(file='bg.png')
+        self.background_image = tk.PhotoImage(file='img/bg.png')
         self.background_label = tk.Label(root, image=self.background_image)
         self.background_label.place(relwidth=1, relheight=1)
 
@@ -126,12 +126,9 @@ class Window(tk.Frame):
     def about_app(self):
         top = tk.Toplevel()
         top.title('About App')
-        lbl = tk.Label(top, text=" Air Quality Index App. \n", justify='center', font=12).pack()
-        lbl2 = tk.Label(top,
-                        text="This app displays the Air Quality Index and \n temperture according to the nearest station. ",
-                        justify='left', font=12).pack()
-
-        lbl1 = tk.Label(top, text="\n Version 1.0.0",
+        lbl = tk.Label(top, text=" \n \n Air Quality Index App.", justify='center', font=12).pack()
+       
+        lbl1 = tk.Label(top, text="\n Version 1.0.0 \n",
                         justify='left', font=12).pack()
 
         top.geometry('%dx%d+%d+%d' % (mWIDTH, mHEIGHT, x, y))
