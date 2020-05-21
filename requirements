@@ -1,0 +1,13 @@
+Requirements
+
+Make sure you have the following installed before running the application on your system.
+
+1. Python3
+2. pip
+3. Tkinter
+4. requests module
+5. API Key*
+
+
+*To acquire the API Key, go to https://www.iqair.com/air-pollution-data-api and follow the instructions.
+
