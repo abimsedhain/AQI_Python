@@ -22,7 +22,7 @@ hs = root.winfo_screenheight()
 x = (ws / 2) - (mWIDTH / 2)
 y = (hs / 2) - (mHEIGHT / 2)
 
-
+#h
 class Window(tk.Frame):
     def __init__(self, master):
         tk.Frame.__init__(self, master)
